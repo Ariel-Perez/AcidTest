@@ -1,0 +1,54 @@
+html
+  head
+    title Acid Test
+    = stylesheet_link_tag "application", params[:controller], :media => "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", params[:controller], "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    .container
+      .header
+        .row
+          .col-md-12
+            a href="#{root_path}"
+              img.header-img src="http://www.acid.cl/wp-content/uploads/2015/05/logo.png" alt="Acid Labs"
+            nav.navbar-nav.pull-right
+              ul.nav          
+                li.menu-option role="navigation" id="user"
+                  - if current_user
+                    a.dropdown-toggle href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                      span.fa-stack.fa-lg
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-user.fa-inverse.fa-stack-1x
+                      /TODO
+                      | Ariel
+                      span.caret
+                    ul.dropdown-menu
+                      li
+                        a href="#{user_path(current_user)}"
+                          i.fa.fa-cog
+                          = current_user.email
+
+                      li.divider role="separator"
+                      li
+                        a href="#{destroy_user_session_path}" data-method="delete" rel="no-follow"
+                          i.fa.fa-sign-out
+                          | Cerrar Sesión
+                  / No current user:
+                  - else
+                    a href="#{new_user_session_path}"
+                      span.fa-stack.fa-lg
+                        i.fa.fa-circle.fa-stack-2x
+                        i.fa.fa-sign-in.fa-inverse.fa-stack-1x
+                      | Inicia Sesión
+
+
+                li.menu-option role="navigation" id="about"
+                  = link_to 'Acerca de', home_about_path
+
+      .row
+        .col-md-12
+          = yield
+      .row
+        .col-md-6.col-md-offset-6
+          footer.footer
+            p &copy; Ariel - 2015

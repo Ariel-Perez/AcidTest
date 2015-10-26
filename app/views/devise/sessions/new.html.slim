@@ -1,0 +1,31 @@
+.row
+  .col-lg-4.col-lg-offset-4.text-center
+    .login
+      .panel.panel-default
+        .panel-heading
+          h1 Acid Test
+        .panel-body
+          == form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+
+            .input-group
+              span.input-group-addon
+                i.fa.fa-envelope
+              input#login-username.form-control type="text" name="user[email]" value="" placeholder="E-Mail" autofocus="true"
+
+            br
+            .input-group
+              span.input-group-addon
+                i.fa.fa-key
+              input#login-username.form-control type="password" name="user[password]" value="" placeholder="Contraseña"
+
+            hr
+            .actions
+              == f.submit "Iniciar Sesión", :class => 'btn btn-lg btn-success'
+
+          == render "devise/shared/links"
+.row
+  .col-lg-4
+  .col-lg-4
+  .col-lg-4
+
+

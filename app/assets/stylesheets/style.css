@@ -1,0 +1,74 @@
+.header
+{
+    padding-top: 25px
+}
+
+
+a
+{
+    color: #464646;
+}
+
+a:visited
+{
+    color: #777;
+}
+
+a:hover
+{
+    color: #3AB54A;
+}
+
+a.active
+{
+    color: #3AB54A;
+}
+
+.header ul.dropdown-menu > li > a
+{
+    color: #464646;
+    background-color: #FFF;
+}
+.header ul.dropdown-menu > li > a:visited
+{
+    color: #777;
+}
+.header ul.dropdown-menu > li > a:hover
+{
+    color: #3AB54A;
+}
+
+.header
+{
+    border-bottom: 1px #EEE solid;
+}
+
+.header nav ul.nav li.menu-option > a:hover
+{
+    border-bottom: 3px #3AB54A solid;
+}
+
+.header nav ul.nav li.menu-option > a
+{
+    border-bottom: 3px #FFF solid;
+    background-color: #FFF;
+    padding-bottom: 35px;
+}
+
+
+nav ul.nav > li
+{
+    float: left;
+}
+
+.header span.fa-stack 
+{
+    float: left;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+:not(.fa-stack) > i.fa 
+{
+    margin: 5px;
+}

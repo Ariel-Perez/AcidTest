@@ -9,6 +9,8 @@ gem 'slim-rails'
 # Font Awesome Icons
 gem 'font-awesome-rails'
 
+# Autenticación
+gem 'devise'
 # JSON Parser
 # gem 'json'
 
@@ -39,10 +41,6 @@ group :production do
   # otro webserver mejor para producción
   #gem 'unicorn'
 end
-
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
