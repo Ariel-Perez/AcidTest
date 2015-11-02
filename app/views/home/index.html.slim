@@ -3,4 +3,16 @@ h1
     i.fa.fa-circle.fa-stack-2x
     i.fa.fa-search.fa-inverse.fa-stack-1x
   | Búsqueda de Artistas
-p Find me in app/views/home/index.html.slim
+
+  .row.relative
+    .col-xs-12
+      input#query.form-control type="text" placeholder="Ingresa el nombre de un Artista"
+
+  hr
+  .row
+    .col-xs-12
+      h3#results-title
+
+  .row
+    .col-xs-12
+      #results.list-group

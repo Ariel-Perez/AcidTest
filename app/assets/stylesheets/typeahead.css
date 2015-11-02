@@ -1,0 +1,15 @@
+#query-hint {
+    color: #999;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+}
+
+#query {
+    background-color: transparent;
+    color: #333;
+}
+
+.relative {
+    position: relative
+}
